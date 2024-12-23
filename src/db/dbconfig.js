@@ -44,7 +44,7 @@ const dbconfig2 = {
 };
 //module.exports = dbconfig; //Old Style
 export default dbconfig;
-export {dbconfig2};
+export { dbconfig2 };
 
 /*
 //MAK_10_NOV_2024 (DontDelete) (It is working well)
