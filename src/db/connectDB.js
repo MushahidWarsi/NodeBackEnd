@@ -1,7 +1,7 @@
 //Last Updated: 06-DEC-2024 
 
 import mssql from "mssql";
-import dbconfig from "./dbconfig.js"  
+import dbconfig from "./dbconfig.js"
 
 let poolPromise = null;
 
@@ -9,12 +9,12 @@ const connectDB = async () => {
     try {
         //const connectionInstance = await mssql.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
         //const connectionInstance = await mssql.connect('Server=localhost,1433;Database=AL_Accounts;User Id=sql;Password=sql2014;Encrypt=false')
-        
+
         //const connectionInstance = await mssql.connect(dbconfig);// Dont Delete 
         poolPromise = await new mssql.ConnectionPool(dbconfig).connect();
-        
+
         console.log(`Database Connected Successfully. `); //${poolPromise.available} //console.log(`\n Database connected successfully. DB HOST: ${connectionInstance.connection.host}`);
-        
+
     } catch (err) {
         console.log("Database connection FAILED !!! ", err);
         process.exit(1)
