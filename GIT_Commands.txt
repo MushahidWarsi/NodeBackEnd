@@ -6,3 +6,5 @@ git config --global user.email "someemail@gmail.com"
 git branch -M main
 git remote add origin GitURL
 git push -u origin main
+
+git push -f origin master
